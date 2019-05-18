@@ -1,0 +1,4 @@
+secret.sql
+virtualenv/
+__pycache__/
+data/
