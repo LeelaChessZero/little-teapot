@@ -14,7 +14,7 @@ async def CmdAddCmd(context):
 
 @CmdHandler
 async def CmdRmCmd(context):
-    name = tuple(context.ParseParams(1))
+    name, = tuple(context.ParseParams(1))
     RemoveCommand(name)
     await context.Done()
 
