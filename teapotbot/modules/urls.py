@@ -68,6 +68,6 @@ async def OnCommand(context):
         return False
     url, full_url, comment, _ = data
     await context.Send(
-        '<%s>%s\nFull URL is: <%s>.' %
+        '%s<%s>\nFull URL is: <%s>.' %
         (('%s: ' % comment) if comment else '', GetUrl(url), full_url))
     return True
