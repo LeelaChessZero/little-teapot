@@ -11,5 +11,3 @@ INSERT OR REPLACE INTO settings VALUES ('cccc', 'suspend_until', '0');
 INSERT OR REPLACE INTO settings VALUES ('cccc', 'allow_back_to_back', 'true');
 INSERT OR REPLACE INTO settings VALUES ('cccc', 'channel_id', '430695662108278784');
 INSERT OR REPLACE INTO settings VALUES ('urls', 'url_prefix', '"https://lc0.org/"');
-
-

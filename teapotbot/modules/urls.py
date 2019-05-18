@@ -53,6 +53,13 @@ async def CmdUrls(context):
 
 
 @CmdHandler
+async def CmdHiddenUrls(context):
+    msg = ' '.join(
+        ['<%s>' % GetUrl(url) for url, _, _ in ListUrls(hidden=True)])
+    await context.Send(msg)
+
+
+@CmdHandler
 async def CmdSetUrlDesc(context):
     params = tuple(context.ParseParams(2))
     url = params[0]

@@ -74,12 +74,12 @@ def FeatureUrl(url):
     db.commit()
 
 
-def ListUrls():
+def ListUrls(hidden=False):
     db = GetDB()
     cur = db.cursor()
     cur.execute(
-        "SELECT url, comment, redirect FROM urls WHERE featured=1 ORDER BY url"
-    )
+        "SELECT url, comment, redirect FROM urls WHERE featured=? ORDER BY url",
+        (not hidden, ))
     return cur.fetchall()
 
 
