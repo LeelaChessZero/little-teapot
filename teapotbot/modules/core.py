@@ -27,7 +27,7 @@ async def CmdBotVars(context):
 
 @CmdHandler
 async def CmdSetBotVar(context):
-    entry, value = tuple(context.ParseParams(1))
+    entry, value = tuple(context.ParseParams(2))
     value = ast.literal_eval(value)
     module, entry = entry.split('.', 2)
     StoreSetting(module, entry, value)

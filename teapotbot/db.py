@@ -70,7 +70,7 @@ def LoadUrl(url):
 def FeatureUrl(url):
     db = GetDB()
     cur = db.cursor()
-    cur.execute("UPDATE urls SET featured=TRUE WHERE url=?", (url, ))
+    cur.execute("UPDATE urls SET featured=1 WHERE url=?", (url, ))
     db.commit()
 
 
